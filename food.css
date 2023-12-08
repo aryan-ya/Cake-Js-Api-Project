@@ -3,11 +3,66 @@
     padding: 0%;
 }body{
     font-family: 'Roboto', sans-serif;
+    background-color: rgb(128, 57, 7);
 }nav{
     display: flex;
     justify-content: space-between;
     background-color: rgb(1, 1, 19);
     color: white;
     padding: 22px;
+    align-items:center ;
 
+}.searchBar{
+    display: flex;
+    justify-content: center;
+}.searchBar input{
+    width: 290px;
+    padding: 7px;
+    border: none;
+    font-size: 18px;
+    border-radius: 3px;
+    margin-inline: 5px;
+}.searchBar button{
+    width: 70px;
+    height: 34px;
+    border: none;
+    background-color: orangered;
+    color: white;
+    font-size: 16px;
+    border-radius: 3px;
+    cursor: pointer;
+
+}.searchBar button:hover{
+   background-color: orange;
+}#heading{
+    text-align: center;
+    padding: 23px;
+    color: white;
+}
+
+
+
+
+/* Responsive */
+
+@media only screen and (max-width: 600px){
+    nav{
+        display: block;
+        justify-content: center;
+        text-align: center;
+    }.searchBar{
+        display: flex;
+        justify-content: center;
+        
+    }.logo h1{
+        margin-bottom: 11px;
+    }
+}
+
+
+
+.food-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(300px , 1fr));
+    width: 80%;
 }
