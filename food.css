@@ -63,6 +63,56 @@
 
 .food-container{
     display: grid;
+  justify-content: center;
     grid-template-columns: repeat(auto-fit , minmax(300px , 1fr));
     width: 80%;
+    margin: 10px auto;
+    text-align: center;
+}.food-card{
+    display: flex;
+    flex-direction: column;
+    /* margin-inline: 20px; */
+    justify-content: center;
+    background-color: white;
+    border-radius: 5px;
+    margin: 19px;
+
+
+}.food-card img{
+    border-top-left-radius: 11px;
+    border-top-right-radius: 5px;
+
+}.food-card button{
+    width: 90px;
+    height: 28px;
+    background-color: orangered;
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    margin: auto;
+    
+}.content{
+    position: fixed;
+    background-color: white;
+    color: black;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50% , 44%);
+   padding: 22px;
+   position: absolute;
+   justify-content: center;
+   width: 30%;
+   height: 40%;
+}.content button{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: rgb(234, 232, 232);
+
+}.content button i{
+    font-size: 20px;
 }
