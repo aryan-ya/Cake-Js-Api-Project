@@ -35,19 +35,37 @@ let renderFood = async(searchData) =>{
        
     })
 
-
+  function ingredients(meal){
+    let list  ="" ;
+    for(let a=0; a<20; a++){
+        let data = meal[`strIngredient1${a}`];
+        if (data) {
+            list+= `<li>${data}</li>`
+        }else{
+            break;
+        }
+    }
+    return list;
+  }
   
 
 
     function showContent(meal) {
         contentText.innerHTML= `
         <h2>${meal.strMeal}</h2>
+        <h2>Ingredients :</h2>
+        <ul>${ingredients(meal)}</ul>
+        <h3>Instruction :</h3>
         <p>${meal.strInstructions}</p>
         `
+
+        document.querySelector(".content").style.display="block"
       
     }
   
-   
+   document.getElementById("close").addEventListener("click" ,function(){
+    document.querySelector(".content").style.display="none"
+   })
 }
 
 
